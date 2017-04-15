@@ -5,7 +5,7 @@
 如果上述宏，和入口函数不对应，编译器会报错：    
 ***error LNK2019: 无法解析的外部符号 _wWinMain@16，该符号在函数 ___tmainCRTStartup 中被引用***    
 - 错误原因可能是：_WINDOWS的宏，但是入口是_tmain()。   
-- 错误原因可能是：完全没有写_tWinMain()    
+- 错误原因可能是：没有写_tWinMain()  
 
 - # 查看crt0.c的_tmainCRTStartup函数
 ```c++
