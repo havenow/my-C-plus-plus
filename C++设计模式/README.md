@@ -17,3 +17,4 @@
 [10.原型模式](https://github.com/havenow/my-C-plus-plus/blob/master/C%2B%2B设计模式/10.原型模式.md)  
 [11.构建器](https://github.com/havenow/my-C-plus-plus/blob/master/C%2B%2B设计模式/11.构建器.md)  
 [12.单件模式](https://github.com/havenow/my-C-plus-plus/blob/master/C%2B%2B设计模式/12.单件模式.md)  
+[16.适配器](https://github.com/havenow/my-C-plus-plus/blob/master/C%2B%2B设计模式/16.适配器.md)  
