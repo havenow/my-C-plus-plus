@@ -18,6 +18,7 @@
 [11.构建器](https://github.com/havenow/my-C-plus-plus/blob/master/C%2B%2B设计模式/11.构建器.md)  
 [12.单件模式](https://github.com/havenow/my-C-plus-plus/blob/master/C%2B%2B设计模式/12.单件模式.md)  
 [13.享元模式]   
+[14.门面模式]  
 [16.适配器](https://github.com/havenow/my-C-plus-plus/blob/master/C%2B%2B设计模式/16.适配器.md)  
 [20.组合模式](https://github.com/havenow/my-C-plus-plus/blob/master/C%2B%2B设计模式/20.组合模式.md)  
 [21.迭代器](https://github.com/havenow/my-C-plus-plus/blob/master/C%2B%2B设计模式/21.迭代器.md)   
