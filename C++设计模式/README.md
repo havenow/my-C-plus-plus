@@ -23,6 +23,7 @@
 [16.适配器](https://github.com/havenow/my-C-plus-plus/blob/master/C%2B%2B设计模式/16.适配器.md)  
 [17.中介者]  
 [18.状态模式]  
+[19.备忘录]  
 [20.组合模式](https://github.com/havenow/my-C-plus-plus/blob/master/C%2B%2B设计模式/20.组合模式.md)  
 [21.迭代器](https://github.com/havenow/my-C-plus-plus/blob/master/C%2B%2B设计模式/21.迭代器.md)   
 [23.命令模式](https://github.com/havenow/my-C-plus-plus/blob/master/C%2B%2B设计模式/23.命令模式.md)  
