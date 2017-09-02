@@ -1,5 +1,5 @@
 - # 使用makefile
-以下操作在mac上完成  
+操作在mac上完成  
 ```c++
 //hello.c
 #include <stdio.h>
