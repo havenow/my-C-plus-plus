@@ -29,6 +29,6 @@ www.cplusplus.com
 en.cppreference.com  
 https://gcc.gnu.org 
 
-- # chromium code 中 普遍使用的 C++11 语法
+- # chromium code 普遍使用的 C++11 语法
 https://www.cnblogs.com/liaokang/p/6554330.html    
 
