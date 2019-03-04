@@ -32,3 +32,5 @@ https://gcc.gnu.org
 - # chromium code 普遍使用的 C++11 语法
 https://www.cnblogs.com/liaokang/p/6554330.html    
 
+- # chromium code Chromium/base--cpu源码
+https://blog.csdn.net/wangshubo1989/article/details/53586504
