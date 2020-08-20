@@ -10,6 +10,7 @@ jni函数：								JNIEXPORT void JNICALL Java_com_android_gl2jni_GL2JNILib_init(J
 导出的函数名称：						Java_com_android_gl2jni_GL2JNILib_init	
 (gl_code.cpp是用c++的方式编译，加了extern "C"的函数 会指示编译器这个函数按C语言（而不是C++）的方式进行编译)
 如果不加extern "C"导出的函数名称是		_Z38Java_com_android_gl2jni_GL2JNILib_initP7_JNIEnvP8_jobjectii
+不加extern "C"，安卓层会找不到jni方法
 
 hello-jni列子编译出的so 在IDA中看到的jni导出函数名称是
 jni函数：						jstring Java_com_example_hellojni_HelloJni_stringFromJNI( JNIEnv* env, jobject thiz )
