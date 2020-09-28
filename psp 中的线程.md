@@ -29,3 +29,17 @@ native_handle_type m_handle;
 	可以看到不同平台创建线程的具体实现
 	所以使用c11里面的线程，代码就是跨平台的
 ```
+
+```
+代码值得一看
+
+threadpool
+prioritizedworkqueue
+threadutil 封装了一个event类
+executor
+```
+
+```
+1.4.1之后的thread直接用了c++标准库中的
+1.2.1 base/mutex.h中有event的跨平台封装
+```
