@@ -35,7 +35,7 @@ native_handle_type m_handle;
 
 threadpool
 prioritizedworkqueue
-threadutil 封装了一个event类
+threadutil 封装了一个event类	使用std::condition_variable，调用condition_variable的wait、wait_for和notify_one函数
 executor
 ```
 
