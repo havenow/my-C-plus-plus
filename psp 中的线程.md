@@ -76,6 +76,8 @@ namespace std{
 }
 7、fast_math.c注释掉 fast_matrix_mul_4x4 = &fast_matrix_mul_4x4_neon(链接错误，没有将fast_math_neon.S参与编译)
 fast_matrix_mul_4x4_neon是arm汇编实现的neon代码
+1.4的工程是可以编译.S文件，怎么样让xCode编译汇编？？？
+
 8、The clang compiler does not support '-mcpu=cortex-a9'
 去掉-mfpu=cortex-a9
 ```
