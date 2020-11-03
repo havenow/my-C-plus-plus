@@ -31,6 +31,12 @@ native_handle_type m_handle;
 ```
 
 ```
+tag 1.7.0 执行cmake时会报错
+需要在cmake/Toolchains/ios.cmake 35行添加
+set(CMAKE_XCODE_ATTRIBUTE_CODE_SIGN_IDENTITY?"")
+```
+
+```
 代码值得一看
 
 threadpool
