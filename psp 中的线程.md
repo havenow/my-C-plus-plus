@@ -1,5 +1,12 @@
 #
 ```
+直接指定特地版本 子模块也一起下载下来
+git clone https://gitee.com/wu_hong_chuan/ppsspp.git --recursive -b v1.9.4
+
+```
+
+#
+```
 tag 1.2.1
 ext/natvie/thread目录下面
 thread.h
