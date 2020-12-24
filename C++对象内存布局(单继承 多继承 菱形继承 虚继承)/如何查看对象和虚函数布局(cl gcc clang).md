@@ -17,11 +17,23 @@ cl ex.cpp /d1 reportSingleClassLayoutBaseAA /EHsc
 
 #gcc
 ```
-g++ -fdump-class-hierarchy mode.cc
+g++ -fdump-class-hierarchy -std=c++11 ex.cpp
+warning: defaulted and deleted functions only available with -std=c++11 or -std=gnu++11
+对象布局和虚函数布局在生成的ex.cpp.002t.class文件中
+
+
+不声明对象，也可以输出对象布局和虚函数布局
+需要些一个main主体，直接return 0;即可，否则会报错
+在函数‘_start’中：
+(.text+0x20)：对‘main’未定义的引用
+collect2: error: ld returned 1 exit status
+
 ```
 
 #clang
 ```
+直接打开mac的命令行工具，就可以使用clang命令
+
 查看对象布局
 clang -Xclang -fdump-record-layouts -stdlib=libc++ -std=c++11 -c ex.cpp
 查看虚函数表布局
