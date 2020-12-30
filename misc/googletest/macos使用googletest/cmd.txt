@@ -1,0 +1,1 @@
+clang++ main.cpp -o usingGT -I./include -L./lib -lgtest -lpthread -std=c++11

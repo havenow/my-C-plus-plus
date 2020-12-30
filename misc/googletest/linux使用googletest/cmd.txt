@@ -1,0 +1,3 @@
+g++ main.cpp -o usingGT -I/home/wangfeng/ÎÄµµ/usingGoogletest/include -L/home/wangfeng/ÎÄµµ/usingGoogletest/lib -lgtest -lpthread -std=c++11
+
+g++ main.cpp -o usingGT -I./include -L./lib -lgtest -lpthread -std=c++11
