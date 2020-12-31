@@ -3,6 +3,12 @@
 
 #include <stdio.h>
 
+#define COLOR(msg, code) "\033[0;1;" #code "m" msg "\033[0m"
+#define RED(msg)	COLOR(msg, 31)
+#define GREEN(msg)	COLOR(msg, 32)
+#define YELLOW(msg)	COLOR(msg, 33)
+#define BLUE(msg)	COLOR(msg, 34)
+
 #define LOG(frm, args...) {\
 	printf("\033[0;33m[%s : %s : %d] \033[0m", __FILE__, __func__, __LINE__);\
 	printf(frm, ##args);\

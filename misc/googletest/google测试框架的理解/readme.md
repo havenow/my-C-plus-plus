@@ -50,6 +50,13 @@ main.cpp:21: Failure
 ```
 
 # 实现COLOR系列封装
+```
+#define COLOR(msg, code) "\033[0;1;" #code "m" msg "\033[0m"
+#define RED(msg)	COLOR(msg, 31)
+#define GREEN(msg)	COLOR(msg, 32)
+#define YELLOW(msg)	COLOR(msg, 33)
+#define BLUE(msg)	COLOR(msg, 34)
+```
 
 # 使用__attribute__完成函数注册
 
