@@ -93,3 +93,74 @@ __attribute__((constructor)) 修饰的函数会先于main函数执行
 ```
 
 # 测试框架
+```
+int add(int a, int b){
+	return a + b;
+}
+
+TEST(test, add1) {
+	EXPECT_EQ(add(3, 4), 7);//==
+	EXPECT_NE(add(3, 4), 9);//!=
+	EXPECT_LT(add(3, 4), 8);//<
+	EXPECT_LE(add(3, 4), 7);//<=
+	EXPECT_GT(add(3, 4), 6);//>
+	EXPECT_GE(add(3, 4), 7);//>=
+}
+
+TEST(test, add2) {
+	EXPECT_EQ(add(3, 4), 7);//==
+	EXPECT_NE(add(3, 4), 9);//!=
+	EXPECT_LT(add(3, 4), 8);//<
+	EXPECT_LE(add(3, 4), 7);//<=
+	EXPECT_GT(add(3, 4), 9);//error >
+	EXPECT_GE(add(3, 4), 7);//>=
+}
+
+int main()
+{
+	return RUN_ALL_TESTS();
+}
+
+输出结果：
+[  Run  ] test.add1
+[  Run  ] test.add2
+  main.cpp:21: Failure
+    EXPECTED: (add(3, 4)) > (9), actual: 7 vs 9
+
+```
+
+```
+对TEST的展开
+便于观察，做下面的修改
+#define EXPECT(a, comp, b) {	\
+	if(!((a) comp (b))){	\
+		printf("error\n");	\
+	}\
+}\
+g++ -E main.cpp > m.cpp，获取预处理后的文件，
+打开m.cpp后，可以看到
+int add(int a, int b){
+ return a + b;
+}
+
+void gTest_test_add1(); //函数申明
+__attribute__((constructor)) 
+void reg_test_add1(){ add_test_func(gTest_test_add1, "test" "." "add1"); } //注册测试函数
+void gTest_test_add1() {//测试函数主体
+ { if(!((add(3, 4)) == (7))){ printf("error\n"); }};
+ { if(!((add(3, 4)) != (9))){ printf("error\n"); }};
+ { if(!((add(3, 4)) < (8))){ printf("error\n"); }};
+ { if(!((add(3, 4)) <= (7))){ printf("error\n"); }};
+ { if(!((add(3, 4)) > (6))){ printf("error\n"); }};
+ { if(!((add(3, 4)) >= (7))){ printf("error\n"); }};
+}
+
+void gTest_test_add2(); __attribute__((constructor)) void reg_test_add2(){ add_test_func(gTest_test_add2, "test" "." "add2"); } void gTest_test_add2() {
+ { if(!((add(3, 4)) == (7))){ printf("error\n"); }};
+ { if(!((add(3, 4)) != (9))){ printf("error\n"); }};
+ { if(!((add(3, 4)) < (8))){ printf("error\n"); }};
+ { if(!((add(3, 4)) <= (7))){ printf("error\n"); }};
+ { if(!((add(3, 4)) > (9))){ printf("error\n"); }};
+ { if(!((add(3, 4)) >= (7))){ printf("error\n"); }};
+}
+```
