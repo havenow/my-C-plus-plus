@@ -31,5 +31,33 @@
 #define EXPECT_GT(a, b) EXPECT(a, >, b)
 #define EXPECT_GE(a, b) EXPECT(a, >=, b)
 
+#define TEST(a, b)	\
+void gTest_##a##_##b();	\
+__attribute__((constructor)) 	\
+void reg_##a##_##b(){	\
+	add_test_func(gTest_##a##_##b, #a "." #b);	\
+}	\
+void gTest_##a##_##b()	\
+
+struct{
+	void(*func)();
+	const char* func_name;
+} func_arr[100];
+int func_cnt = 0;
+
+void add_test_func(void(*func)(), const char* str){
+	func_arr[func_cnt].func = func;
+	func_arr[func_cnt].func_name = str;
+	func_cnt++;
+	return;
+}
+
+int RUN_ALL_TESTS(){
+	for(int i = 0; i < func_cnt; i++) {
+		printf(GREEN("[  Run  ]") " %s\n", func_arr[i].func_name);
+		func_arr[i].func();
+	}
+	return 0;
+}
 
 #endif
